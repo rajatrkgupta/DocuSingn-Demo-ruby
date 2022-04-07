@@ -1,0 +1,16 @@
+<% title = "Error" %>
+
+<h2>Problem: an error occurred</h2>
+<p>Error information:</p>
+
+<% if @error_code %>
+<p><%= @error_code %>: <%= @error_message %></p>
+<% if @error_information %>
+<p><%== @error_information %></p>
+<% end %>
+<%  else  %>
+<p><pre><%= @err %></pre></p>
+<% end %>
+
+
+  <p><a href="/">Continue</a></p>
